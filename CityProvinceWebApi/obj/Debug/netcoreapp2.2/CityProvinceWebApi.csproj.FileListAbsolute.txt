@@ -1,0 +1,15 @@
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\appsettings.json
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\CityProvinceWebApi.deps.json
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\CityProvinceWebApi.runtimeconfig.json
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\CityProvinceWebApi.runtimeconfig.dev.json
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\CityProvinceWebApi.dll
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.RazorAssemblyInfo.cache
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.RazorAssemblyInfo.cs
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.AssemblyInfoInputs.cache
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.AssemblyInfo.cs
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.RazorTargetAssemblyInfo.cache
+D:\CityProvince\CityProvinceWebApi\bin\Debug\netcoreapp2.2\CityProvinceWebApi.pdb
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.dll
+D:\CityProvince\CityProvinceWebApi\obj\Debug\netcoreapp2.2\CityProvinceWebApi.pdb
