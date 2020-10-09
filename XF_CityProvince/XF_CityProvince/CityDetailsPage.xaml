@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XF_CityProvince.CityDetailsPage"
+             Title="City Details">
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+              iOS="0, 20, 0, 0"
+              Android="0, 0, 0, 0"
+              WinPhone="0, 0, 0, 0"/>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView x:Name="CityScrollView" Orientation="Vertical" VerticalOptions="FillAndExpand" >
+            <StackLayout Orientation="Vertical"  VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="#FFF" Margin="20,5,20,5" Padding="15,10,15,10">
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="City Name" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtName" Text="{Binding Name}" Style="{StaticResource editEntry}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Population" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtPopulation" Text="{Binding Population}" Style="{StaticResource editEntry}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}">
+                        <Label Text="Census Year" WidthRequest="120"  VerticalOptions="Center" />
+                        <Entry x:Name="txtCensusYear" Text="{Binding CensusYear}" Style="{StaticResource editEntry}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="{StaticResource T20W}" Margin="0,0,0,20">
+                        <Picker x:Name="ddlProvinces" Title="Province" Style="{StaticResource editEntry}" VerticalOptions="Center">
+                            <Picker.Items>
+                                <x:String>Select a Province</x:String>
+                                <x:String>Alberta</x:String>
+                                <x:String>British Columbia</x:String>
+                                <x:String>Manitoba</x:String>
+                                <x:String>New Brunswick</x:String>
+                                <x:String>Newfoundland and Labrador</x:String>
+                                <x:String>Northwest Territories</x:String>
+                                <x:String>Nova Scotia</x:String>
+                                <x:String>Nunavut</x:String>
+                                <x:String>Ontario</x:String>
+                                <x:String>Prince Edward Island</x:String>
+                                <x:String>Quebec</x:String>
+                                <x:String>Saskatchewan</x:String>
+                                <x:String>Yukon</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+
+                    <Button Text="Save" Clicked="SaveClicked" Style="{StaticResource CityListButton}" />
+                    <Button Text="Cancel" Clicked="CancelClicked" Style="{StaticResource CityListButton}" />
+                    <Button x:Name="btnDelete" Text="Delete" Clicked="DeleteClicked" Style="{StaticResource CityListButton}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

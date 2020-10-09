@@ -1,0 +1,3 @@
+[submodule "CityProviceWebApi"]
+	path = CityProviceWebApi
+	url = https://github.com/DanielMaina/CityProvinceWebApi.git

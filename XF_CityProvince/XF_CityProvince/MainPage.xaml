@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XF_CityProvince.MainPage"
+             Title="City List">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="AddClicked" IconImageSource="plus.png" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+            iOS="0, 20, 0, 0" Default="10,40,10,10"
+            Android="0, 0, 0, 0" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <Grid RowSpacing="20" ColumnSpacing="20" Padding="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout x:Name="TitlePanel" Grid.Row="0" Padding="20,20,20,0">
+                <Picker x:Name="ddlProvinces" Title="Filter cities by Province" class="Province" Style="{StaticResource editEntry}" ItemsSource="{Binding provinces}" ItemDisplayBinding="{Binding Name}" SelectedIndexChanged="ddlProvinces_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>All Provinces</x:String>
+                        <x:String>Alberta</x:String>
+                        <x:String>British Columbia</x:String>
+                        <x:String>Manitoba</x:String>
+                        <x:String>New Brunswick</x:String>
+                        <x:String>Newfoundland and Labrador</x:String>
+                        <x:String>Northwest Territories</x:String>
+                        <x:String>Nova Scotia</x:String>
+                        <x:String>Nunavut</x:String>
+                        <x:String>Ontario</x:String>
+                        <x:String>Prince Edward Island</x:String>
+                        <x:String>Quebec</x:String>
+                        <x:String>Saskatchewan</x:String>
+                        <x:String>Yukon</x:String>
+                    </Picker.Items>
+                    <Picker.SelectedItem>All Provinces</Picker.SelectedItem>
+                </Picker>
+            </StackLayout>
+            <ListView x:Name="cityList" Grid.Row="1" Margin="30,0,30,0" ItemSelected="citySelected" ItemsSource="{Binding City}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Summary}" Detail="{Binding PopSummary}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
